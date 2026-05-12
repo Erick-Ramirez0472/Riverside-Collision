@@ -74,14 +74,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      padding: 18px 0;
+      padding: 10px 0;
       gap: 20px;
     }
 
     .nav-logo {
-      height: 86px;
+      height: 140px;
       width: auto;
+
       object-fit: contain;
+
+      transform: scale(1.35);
+      transform-origin: left center;
     }
 
     @media (max-width: 620px) {
@@ -251,22 +255,6 @@
       overflow: hidden;
     }
 
-    .hero-logo-mark {
-      position: absolute;
-
-      top: 28px;
-      left: 28px;
-
-      width: min(360px, 72%);
-
-      opacity: 0.92;
-
-      filter:
-        drop-shadow(0 16px 30px rgba(0,0,0,0.65));
-
-      z-index: 2;
-    }
-
     .photo-placeholder {
       width: 100%;
       border-radius: 18px;
@@ -371,15 +359,27 @@
     }
 
     .service-icon {
-      width: 42px;
-      height: 42px;
-      display: grid;
-      place-items: center;
-      border-radius: 14px;
-      background: rgba(204,28,28,0.15);
-      color: #1e90ff;
-      font-weight: 900;
-      margin-bottom: 14px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+
+      font-size: 0.9rem;
+      font-weight: 800;
+
+      color: rgba(255,255,255,0.38);
+
+      margin-bottom: 18px;
+
+      letter-spacing: 0.08em;
+    }
+
+    .service-icon::after {
+      content: "";
+      display: inline-block;
+      width: 28px;
+      height: 1px;
+      background: rgba(255,255,255,0.18);
+      margin-left: 10px;
     }
 
     .gallery-grid {
@@ -710,13 +710,6 @@
 
       <div class="hero-card">
         <div class="hero-card-inner">
-
-          <img
-            src="riversidelogo.png"
-            alt="Riverside Collision Repair logo"
-            class="hero-logo-mark"
-          />
-
           <div class="photo-placeholder">
             <strong>Before & after photos go here</strong>
             <span>Replace <code>shop-hero.jpg</code> with a real shop or finished repair photo.</span>
